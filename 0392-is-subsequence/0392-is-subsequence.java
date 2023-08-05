@@ -11,6 +11,6 @@ class Solution {
                 sidx++;
             }
         }
-        return (sidx>=s.length()? true: false);
+        return sidx==s.length()? true: false;
     }
 }
