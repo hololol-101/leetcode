@@ -12,7 +12,7 @@ class Solution {
         
         //Zero 수가 2개 이상일 경우 모든 결과값은 0
         if(zeroCnt>1){
-            return new int[nums.length];
+            mul=0;
         }
         
         for(int i=0; i<nums.length; i++){
