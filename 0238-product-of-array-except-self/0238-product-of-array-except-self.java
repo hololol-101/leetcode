@@ -19,8 +19,7 @@ class Solution {
             if(nums[i] == 0){
                 nums[i] = mul;
             }else{
-                if(zeroCnt>0)nums[i] = 0;
-                else nums[i] = mul/nums[i];             
+                nums[i] = (zeroCnt>0)?0:mul/nums[i];
             }
         }
         return nums;
