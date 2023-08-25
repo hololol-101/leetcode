@@ -9,7 +9,6 @@ class Solution {
                 if(s.charAt(i-k)=='i') cnt--;
             }
             max = Math.max(max, cnt);
-            if(max==k) break;
         }
         return max;
     }
