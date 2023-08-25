@@ -4,29 +4,31 @@ class Solution {
         answer.add(new LinkedList());
         answer.add(new LinkedList());
         Set<Integer> set = new HashSet<>();
-
-        Arrays.sort(nums1);
-        Arrays.sort(nums2);
+        Set<Integer> set2 = new HashSet<>();
 
         for(int i:nums1){
             set.add(i);    
         }
-        
-        for(int i=0; i<nums2.length; i++){
-            if(i==0||nums2[i]!=nums2[i-1]){
-                if(set.contains(nums2[i])){
-                    set.remove(nums2[i]);
-                }else{
-                    answer.get(1).add(nums2[i]);
-                }   
-            }
 
+        for(int i:nums2){
+            set2.add(i);    
         }
+
         Iterator<Integer> it = set.iterator();
         while(it.hasNext()){
-            answer.get(0).add(it.next());
+            int n = it.next();
+            if(!set2.contains(n)){
+                answer.get(0).add(n);
+            }
         }
         
+        it = set2.iterator();
+        while(it.hasNext()){
+            int n = it.next();
+            if(!set.contains(n)){
+                answer.get(1).add(n);
+            }
+        }
         return answer;
     }
 }
