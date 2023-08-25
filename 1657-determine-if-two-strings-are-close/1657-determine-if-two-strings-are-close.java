@@ -30,9 +30,7 @@ class Solution {
         Collections.sort(al2);
         
         for(int i=0; i<al.size(); i++){
-          System.out.println(al.get(i));
-          System.out.println(al2.get(i));
-            if(al.get(i)<al2.get(i)||al.get(i)>al2.get(i)){
+            if(!al.get(i).equals(al2.get(i))){
               return false;
             }
         }
