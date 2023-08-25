@@ -17,6 +17,7 @@ class Solution {
             cnt += set.getOrDefault(s.charAt(i), 0) - set.getOrDefault(s.charAt(i-k), 0);
             
             max = Math.max(max, cnt);
+            if(max==k) return k;
         }
         return max;
     }
