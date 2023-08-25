@@ -14,7 +14,7 @@ class Solution {
             if(left==sum) return i;
             
         }
-        //if(left ==0)return n-1;
+        
         return -1;
     }
 }
