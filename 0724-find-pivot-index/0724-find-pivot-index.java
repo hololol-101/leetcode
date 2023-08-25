@@ -12,9 +12,7 @@ class Solution {
             left+=nums[i-1];
             sum-=nums[i];
             if(left==sum) return i;
-            
         }
-        
         return -1;
     }
 }
