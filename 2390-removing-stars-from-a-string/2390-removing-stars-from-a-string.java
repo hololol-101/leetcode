@@ -4,7 +4,6 @@ class Solution {
         Stack<Character> stack = new Stack<>();
         StringBuilder sb = new StringBuilder();
 
-        String answer="";   
         for(int i=0; i<s.length();i++){
             char c = s.charAt(i);
             if(c=='*'){
