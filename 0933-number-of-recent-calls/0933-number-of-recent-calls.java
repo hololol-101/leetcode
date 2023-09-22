@@ -1,7 +1,6 @@
 class RecentCounter {
     Queue<Integer> queue = new LinkedList<>();
-    int cnt = 0;
-    int st = 0;
+
     public RecentCounter() {
     }
     
