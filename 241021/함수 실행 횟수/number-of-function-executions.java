@@ -4,12 +4,13 @@ public class Main {
         // 여기에 코드를 작성해주세요.
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        int[] arr = new int [n];
+        long[] arr = new long [n+1];
+        int mod = 1000000007;
         arr[0] = 1;
-        arr[1] = 3;
-        for(int i=2; i<n; i++){
+        arr[1] = 1;
+        for(int i=2; i<=n; i++){
             arr[i] = arr[i-1]+arr[i-2]+1;
         }
-        System.out.println(arr[n-1]);
+        System.out.println(arr[n]%mod);
     }
 }
