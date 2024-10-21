@@ -16,7 +16,8 @@ public class Main {
             arr[i][2] = (arr[i-2][1] +arr[i-2][3])%mod;
             arr[i][3] = (arr[i-3][1] +arr[i-3][2])%mod;
         }
-        int answer = (arr[n][1]+arr[n][2]+arr[n][3])%mod;
+        int answer = (arr[n][1]+arr[n][2])%mod ;
+        answer = (answer +arr[n][3])%mod;
         System.out.println(answer);
     }
 
